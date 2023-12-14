@@ -10,4 +10,10 @@ class WorkerController extends Controller
     {
         $name = $request->input('name');
         return view('worker/workerMain', compact('name'));
-    }}
+    }
+    public function workerTest(Request $request){
+        $session = "test";
+        return view('worker/workerTest',compact('session'));
+    }
+
+}

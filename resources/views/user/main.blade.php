@@ -3,10 +3,21 @@
 
 @section('content')
 
-@if ($name == null)
-    <h1>User Main Please login!!!</h1>
-@else
-    <h1>User Main Logged in {{ $name }} !!!</h1>
-@endif
+
+<div>
+    <h2>Ном:</h2>
+    <ul>
+        @foreach ($bookMains as $bookMain)
+        <a href="{{ route('book.details', ['id' => $bookMain->id]) }}">
+            <li>
+                <strong>Нэр:</strong> {{ $bookMain->title }} <br>
+                <strong>Зохиолч:</strong> {{ $bookMain->author }} <br>
+                <br>
+            </li>
+        </a>
+        @endforeach
+    </ul>
+</div>
+
 
 @endsection

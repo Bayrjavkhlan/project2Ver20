@@ -1,15 +1,13 @@
 @extends('master')
-@section('title', 'Library')
+@section('title', 'workertest')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 @endsection
 @section('content')
 
-@if ($name == null)
-    <h1>Worker Main Please login!!!</h1>
+@if ($session == null)
+    <h1>Worker Test Please login!!!</h1>
 @else
-    <h1>Worker Main Logged in {{ $name }} !!!</h1>
+    <h1>Worker Test Logged in {{ $session }} !!!</h1>
 @endif
-
-
 @endsection
